@@ -1,0 +1,81 @@
+*{
+    font-family: monospace;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.container{
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin: 14px;
+    max-width: 600px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.titulo{
+    background: linear-gradient(300deg, #FA4032 0%, #FAB12F 100%);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.formulario{
+    padding: 18px;
+}
+
+.conteudoDoFormulario{
+    margin-bottom: 4px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.conteudoDoFormulario label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.conteudoDoFormulario input{
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+    border: 2px solid #dfdfdf;
+}
+
+.conteudoDoFormulario a{
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    visibility: hidden;
+}
+
+.formulario button{
+    background: linear-gradient(300deg, #FA4032 0%, #FAB12F 100%);
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.conteudoDoFormulario.error input{
+    border-color: red;
+}
+
+.conteudoDoFormulario.error a{
+    color: red;
+    visibility: visible;
+}
