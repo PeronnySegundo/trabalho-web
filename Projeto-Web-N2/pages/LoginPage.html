@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/styles/LoginStyle.css">
+</head>
+<body>
+    <div class="container">
+        <section class="titulo">
+            <h2>Login</h2>
+        </section>
+        <form id="formulario" class="formulario">
+            <div class="conteudoDoFormulario">
+                <label for="username">Nome de usuário</label>
+                <input type="text" id="username" required placeholder="..."/>
+                <a>Mensagem de erro</a>
+            </div>
+            <div class="conteudoDoFormulario">
+                <label for="Email">Email</label>
+                <input type="email" id="email" required placeholder="..."/>
+                <a>Mensagem de erro</a>
+            </div>
+            <div class="conteudoDoFormulario">
+                <label for="password">Senha</label>
+                <input type="password" id="senha" required placeholder="..."/>
+                <a>Mensagem de erro</a>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    <script src="/scripts/LoginScript.js"></script>
+</body>
+</html>
