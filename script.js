@@ -2,13 +2,20 @@ const form = document.getElementById("formulario");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
 const senha = document.getElementById("senha")
-const senhaConfirmacao = document.getElementById("senhaConfirmacao");
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if(validacaoDoFormulario){
-        alert("Cadastrado!");
-    }
+    validacaoDoFormulario();
+})
+
+email.addEventListener("blur", () => {
+    validacaoEmail();
+})
+username.addEventListener("blur", () => {
+    validacaoUsername();
+})
+senha.addEventListener("blur", () => {
+    validacaoSenha();
 })
 
 validacaoUsername = () => {
@@ -47,31 +54,17 @@ validacaoSenha = () => {
     }
 }
 
-validacaoConfrimarSenha = () => {
-    const senhaValue = senha.value;
-    const senhaConfirmacaoValue = senhaConfirmacao.value;
-    if(senhaConfirmacaoValue === ""){
-        mostrarErro(senhaConfirmacao, "A confirmação de senha não pode ser vazia");
-    }
-    else if(senhaConfirmacaoValue !== senhaValue){
-        mostrarErro(senhaConfirmacao, "Senhas diferentes");
-    }
-    else{
-        const item = senhaConfirmacao.parentElement;
-        item.className = "conteudoDoFormulario";
-    }
-}
-
 validacaoDoFormulario = () => {
     validacaoUsername();
     validacaoEmail();
-    validacaoSenha();
-    validacaoConfrimarSenha();  
+    validacaoSenha();  
     const item = form.querySelectorAll(".conteudoDoFormulario");
     const valido = [...item].every((item) => {
         return item.className == "conteudoDoFormulario"
     });
-    return valido;
+    if(valido){
+        alert("Cadastrado!")
+    }
 }
  
 mostrarErro = (input, menssagem) => {
